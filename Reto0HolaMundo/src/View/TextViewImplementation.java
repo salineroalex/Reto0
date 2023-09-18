@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Controller;
+package View;
 
 /**
  *
- * @author alexs
+ * @author alexs, iratig
  */
-public class TextViewImplementation {
+public class TextViewImplementation implements View{
+
+    @Override
+    public void showGreeting(String message) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(message);
+    }
     
 }

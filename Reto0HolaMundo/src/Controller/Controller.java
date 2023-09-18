@@ -4,11 +4,26 @@
  * and open the template in the editor.
  */
 package Controller;
+import View.View;
 
 /**
  *
- * @author alexs
+ * @author alexs, iratig
  */
 public class Controller {
+    View view;
+    Model model;
     
+    /**
+     * Manages the communication between model and view.
+     * @param view      
+     * @param model 
+     */
+    
+    /**
+     * Gets the message from the data side and calls for show function.
+     */
+    public void run(View view, Model model){
+        view.showGreeting(model.getGreeting());
+    }
 }

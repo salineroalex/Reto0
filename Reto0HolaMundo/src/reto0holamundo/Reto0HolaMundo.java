@@ -5,6 +5,9 @@
  */
 package reto0holamundo;
 
+import Controller.Controller;
+import Controller.ModelFactory;
+import View.ViewFactory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,7 +34,8 @@ public class Reto0HolaMundo extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        //launch(args);
+        new Controller().run(ViewFactory.getView(), ModelFactory.getModel());
     }
     
 }

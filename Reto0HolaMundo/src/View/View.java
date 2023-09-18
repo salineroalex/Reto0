@@ -3,12 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package View;
 
 /**
  *
  * @author alexs
  */
-public class ViewFactory {
+public interface View {
     
+    /**
+     * show greeting.
+     * @param message   Contains the greeting that will be shown.
+     */
+    public void showGreeting(String message);
 }
