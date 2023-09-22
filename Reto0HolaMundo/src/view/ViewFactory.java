@@ -11,16 +11,14 @@ package view;
  * @author alexs
  */
 public class ViewFactory {
-    private static View view;
     public static View getView(String type) {
         switch (type) {
             case "1":
-                view = new TextViewImplementation();
-                break;
+                return new TextViewImplementation();
             case "2":
-                view = new WindowViewImplementation();
-                break;
+                return new WindowViewImplementation();
+               
         }
-        return view;
+        return null;
     }
 }

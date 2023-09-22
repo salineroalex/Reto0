@@ -11,17 +11,15 @@ public class ModelFactory {
      *
      * @return returns the file implementation.
      */
-    private static Model model;
+
 
     public static Model getModel(String type) {
         switch (type) {
             case "1":
-                model = new FileModelImplementation();
-                break;
+                return new FileModelImplementation();
             case "2":
-                model = new DBModelImplementation();
-                break;
+                return new DBModelImplementation();
         }
-        return model;
+        return null;
     }
 }

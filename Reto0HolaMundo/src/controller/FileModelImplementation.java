@@ -16,7 +16,7 @@ public class FileModelImplementation implements Model {
      */
     @Override
     public String getGreeting() {
-        configFile = ResourceBundle.getBundle("Controller.Config");
+        configFile = ResourceBundle.getBundle("controller.Config");
         return configFile.getString("MESSAGE");
         
         /*Single line:
