@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package reto0holamundo;
+package application;
 
-import Controller.Controller;
-import Controller.ModelFactory;
-import View.ViewFactory;
-import javafx.application.Application;
+import controller.Controller;
+import controller.ModelFactory;
+import view.ViewFactory;
+import java.util.ResourceBundle;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,8 +18,8 @@ import javafx.stage.Stage;
  *
  * @author alexs
  */
-public class Reto0HolaMundo extends Application {
-    
+public class Application extends javafx.application.Application{
+    private static ResourceBundle configFile;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -35,7 +35,8 @@ public class Reto0HolaMundo extends Application {
      */
     public static void main(String[] args) {
         //launch(args);
-        new Controller().run(ViewFactory.getView(), ModelFactory.getModel());
+        configFile = ResourceBundle.getBundle("Controller.Config");
+        new Controller().run(ViewFactory.getView(configFile.getString("VIEW")), ModelFactory.getModel(configFile.getString("MODEL")));
     }
     
 }
